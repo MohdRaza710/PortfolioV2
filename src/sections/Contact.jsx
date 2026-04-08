@@ -90,9 +90,9 @@ export function Contact() {
 
             <div className="mt-5 rounded-2xl border border-white/10 bg-zinc-950/40 p-4">
               <p className="text-sm text-zinc-200">
-                Prefer a direct message? Add your email/links here.
+                Prefer a direct message? .
               </p>
-              <p className="mt-2 text-sm font-semibold text-blue-300">youremail@example.com</p>
+              <p className="mt-2 text-sm font-semibold text-blue-300">mrmraza.710@gmail.com</p>
             </div>
           </div>
         </Reveal>

@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.devportfoliotemplates.com)",
+      "WebSearch",
+      "WebFetch(domain:devportfoliotemplates.com)",
+      "Bash(curl -s \"https://devportfoliotemplates.com/portfolio-templates/web-developer\")",
+      "Bash(curl -sL -A \"Mozilla/5.0\" \"https://devportfoliotemplates.com/portfolio-templates/web-developer\")"
+    ]
+  }
+}

@@ -38,7 +38,7 @@ export const PROJECTS = [
     title: "AAMEquimpment",
     description:
       "A high-performance, commercial digital catalog developed for a specialized heavy machinery and truck parts supplier. The platform is designed to streamline the way B2B clients browse and source essential industrial components.",
-    imageSrc: "/project-placeholder.svg",
+    imageSrc: "/aammg.com-screenshot.png",
     tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
     icon: MessagesSquare,
     liveUrl: "https://www.aammg.com",
@@ -47,7 +47,7 @@ export const PROJECTS = [
     title: "Salary Management System",
     description:
       "A comprehensive, full-stack human resources and payroll platform designed to automate administrative workflows. The application focuses on digitizing employee records, tracking attendance, and streamlining the complex process of monthly payroll generation.",
-    imageSrc: "/project-placeholder.svg",
+    imageSrc: "/hr-mng-screenshot.png",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     icon: ShieldCheck,
     liveUrl: "https://hr-mng-thdz.vercel.app/",
@@ -56,7 +56,7 @@ export const PROJECTS = [
     title: "AAMTechsolution",
     description:
       "A professional service platform showcasing end-to-end technical solutions, ranging from custom software development to advanced networking infrastructure. This site serves as a digital hub for professional IT services and client management.",
-    imageSrc: "/project-placeholder.svg",
+    imageSrc: "/aamtechsolution.com-screenshot.png",
     tech: ["React", "Tailwind", "API", "Express", "MongoDB", "Socket.io"],
     icon: ShoppingCart,
     liveUrl: "https://www.aamtechsolution.com",

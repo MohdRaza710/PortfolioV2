@@ -1,5 +1,6 @@
 import React from "react";
-import { GitBranch, Link2 } from "lucide-react";
+import { FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Reveal } from "../components/Reveal.jsx";
 
 export function Footer() {
@@ -12,22 +13,22 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-2">
             <a
-              href="https://www.aammg.com"
+              href="https://x.com/MohammedRa78084"
               target="_blank"
               rel="noreferrer"
               className="rounded-xl border border-white/10 bg-white/5 p-2 text-zinc-200 hover:bg-white/10"
-              aria-label="GitHub"
+              aria-label="Twitter"
             >
-              <GitBranch className="h-5 w-5" />
+              <FaXTwitter className="h-5 w-5" />
             </a>
             <a
-              href="https://www.aamtechsolution.com"
+              href="www.linkedin.com/in/mohammed-raza-92aaa4398"
               target="_blank"
               rel="noreferrer"
               className="rounded-xl border border-white/10 bg-white/5 p-2 text-zinc-200 hover:bg-white/10"
               aria-label="LinkedIn"
             >
-              <Link2 className="h-5 w-5" />
+              <FaLinkedin className="h-5 w-5" />
             </a>
           </div>
         </div>

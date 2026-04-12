@@ -1,3 +1,4 @@
+import { title } from "framer-motion/client";
 import {
   BadgeCheck,
   Database,
@@ -6,6 +7,8 @@ import {
   Server,
   ShieldCheck,
   ShoppingCart,
+  Wallet,
+  ChartNoAxesCombined 
 } from "lucide-react";
 
 export const NAV_LINKS = [
@@ -61,13 +64,30 @@ export const PROJECTS = [
     icon: ShoppingCart,
     liveUrl: "https://www.aamtechsolution.com",
   },
+  {
+    title: "Personal Finance & Expense Tracker",
+    description:
+      "A user-friendly application for managing personal finances and tracking expenses. The platform provides insights into spending patterns and helps users make informed financial decisions.",
+    imageSrc: "/finance-tracker-screenshot.png",
+    tech: ["Next.JS", "Postgres SQL", "Supabase"],
+    icon: Wallet,
+    liveUrl: "https://expensetracker-nu-seven.vercel.app/",
+  },
+  {
+    title: "Mathtrade",
+    description:
+      "A specialized trading platform designed to facilitate Math Trades a unique swap system where participants use an algorithm to maximize the number of successful exchanges. Unlike a direct 1-to-1 trade, this platform enables multi-user trade loops, allowing User A to give to User B, while receiving from User C.",
+    imageSrc: "/mathtrade-screenshot.png",
+    tech: ["React", "Tailwind CSS", "API", "Chart.js"],
+    icon: ChartNoAxesCombined,
+    liveUrl: "https://mathtrade1.netlify.app/",
+  }
 ];
 
 export const EXPERIENCE = [
   {
     role: "Full‑Stack Developer",
-    company: "Your Company",
-    period: "2025 — Present",
+    period: "2026 — Present",
     icon: Server,
     highlights: [
       "Built and maintained MERN features with clean API boundaries.",
@@ -77,7 +97,6 @@ export const EXPERIENCE = [
   },
   {
     role: "Backend Intern",
-    company: "Your Company",
     period: "2024 — 2025",
     icon: Database,
     highlights: [
@@ -88,7 +107,6 @@ export const EXPERIENCE = [
   },
   {
     role: "Freelance Developer",
-    company: "Self‑Employed",
     period: "2023 — 2024",
     icon: Globe,
     highlights: [

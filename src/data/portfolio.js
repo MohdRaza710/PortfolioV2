@@ -86,8 +86,9 @@ export const PROJECTS = [
 
 export const EXPERIENCE = [
   {
-    role: "Full‑Stack Developer",
-    period: "2026 — Present",
+    role: "Full‑Stack Intern",
+    company: "Al Abbas Mining and Transport",
+    period: "2025 — Present",
     icon: Server,
     highlights: [
       "Built and maintained MERN features with clean API boundaries.",
@@ -96,7 +97,8 @@ export const EXPERIENCE = [
     ],
   },
   {
-    role: "Backend Intern",
+    role: "Backend developer (freelance)",
+    company: "Self-Employed",
     period: "2024 — 2025",
     icon: Database,
     highlights: [
@@ -106,7 +108,8 @@ export const EXPERIENCE = [
     ],
   },
   {
-    role: "Freelance Developer",
+    role: "frontend Developer (freelance)",
+    company: "Self-Employed",
     period: "2023 — 2024",
     icon: Globe,
     highlights: [
@@ -117,7 +120,7 @@ export const EXPERIENCE = [
   },
 ];
 
-export const SOCIALS = [
+export const Webs = [
   { label: "Website", href: "https://www.aammg.com", icon: BadgeCheck },
   { label: "Company", href: "https://www.aamtechsolution.com", icon: BadgeCheck },
 ];

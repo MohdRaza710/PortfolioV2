@@ -9,7 +9,7 @@ export function Projects() {
       <SectionHeader
         eyebrow="Projects"
         title="Interactive cards for real work"
-        description="Hover states, tech pills, and quick links to demo/source. Replace the placeholder URLs with your real deployments."
+        description="Hover states, tech pills, and quick links to demos. Each project is a mini case study of my work."
       />
 
       <div className="grid gap-5 md:grid-cols-2">

@@ -1,38 +1,60 @@
 import React from "react";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, MessageCircle } from "lucide-react"; // Added MessageCircle
 import { Reveal } from "../components/Reveal.jsx";
 import { HERO_ROLES } from "../data/portfolio.js";
 
 function useTypewriter(words, { typeMs = 55, deleteMs = 35, holdMs = 1100 } = {}) {
+
   const [wordIndex, setWordIndex] = React.useState(0);
+
   const [subIndex, setSubIndex] = React.useState(0);
+
   const [deleting, setDeleting] = React.useState(false);
 
+
+
   React.useEffect(() => {
+
     const current = words[wordIndex % words.length] ?? "";
 
     const timeout = window.setTimeout(() => {
+
       if (!deleting) {
+
         if (subIndex < current.length) setSubIndex((s) => s + 1);
+
         else setDeleting(true);
+
       } else {
+
         if (subIndex > 0) setSubIndex((s) => s - 1);
+
         else {
+
           setDeleting(false);
+
           setWordIndex((i) => (i + 1) % words.length);
+
         }
+
       }
+
     }, deleting ? deleteMs : subIndex === current.length ? holdMs : typeMs);
 
     return () => window.clearTimeout(timeout);
+
   }, [words, wordIndex, subIndex, deleting, typeMs, deleteMs, holdMs]);
 
   const current = words[wordIndex % words.length] ?? "";
+
   return current.slice(0, subIndex);
+
 }
 
 export function Hero() {
   const typed = useTypewriter(HERO_ROLES);
+  const whatsappNumber = "0386997600";
+  const defaultMessage = encodeURIComponent("Hi Mohammed, I saw your portfolio and would like to discuss a project.");
 
   return (
     <section id="home" className="container-max pb-10 pt-16 sm:pt-20">
@@ -72,6 +94,17 @@ export function Hero() {
               >
                 View Projects <ArrowRight className="h-4 w-4" />
               </a>
+
+              {/* Added WhatsApp Button */}
+              <a
+                href={`https://wa.me/${whatsappNumber}?text=${defaultMessage}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-semibold text-zinc-200 transition-all hover:bg-white/10"
+              >
+                <MessageCircle className="h-4 w-4 text-green-400" />
+                WhatsApp Me
+              </a>
             </div>
           </Reveal>
         </div>
@@ -108,4 +141,3 @@ export function Hero() {
     </section>
   );
 }
-

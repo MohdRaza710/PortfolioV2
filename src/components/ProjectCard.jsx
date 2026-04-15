@@ -47,10 +47,10 @@ export function ProjectCard({ project, index = 0 }) {
           <img
             src={project.imageSrc}
             alt={`${project.title} preview`}
-            className="aspect-[16/9] w-full object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
+            className="aspect-video w-full object-cover transition duration-500 ease-out group-hover:scale-[1.04]"
             loading="lazy"
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/55 via-transparent to-transparent" />
+          <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-zinc-950/55 via-transparent to-transparent" />
           <div className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-zinc-950/55 px-3 py-2 text-sm font-semibold text-zinc-100 backdrop-blur">
             <span className="grid h-7 w-7 place-items-center rounded-lg bg-blue-500/15 text-blue-200 ring-1 ring-blue-500/30">
               <Icon className="h-4 w-4" />

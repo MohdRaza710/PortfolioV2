@@ -47,9 +47,9 @@ export const PROJECTS = [
     liveUrl: "https://www.aammg.com",
   },
   {
-    title: "Salary Management System",
+    title: "HR Management System – Alabbas Mining & Transport Madagascar",
     description:
-      "A modern HR management dashboard built as a practice project. It allows managing employees, tracking attendance, handling leave requests, and viewing team information in an organized interface. The dashboard features a clean design with intuitive navigation, making it easy for HR professionals to oversee employee data and streamline administrative tasks.",
+      "A modern HR Management System developed for Alabbas Mining and Transport Madagascar. The dashboard enables efficient management of employees, attendance tracking, leave requests, and team information for the company's mining and transport operations. It features a clean design, intuitive navigation, and real-time updates to streamline HR processes and improve employee management.",
     imageSrc: "/hr-mng-screenshot.png",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     icon: ShieldCheck,
@@ -74,7 +74,7 @@ export const PROJECTS = [
     liveUrl: "https://expensetracker-nu-seven.vercel.app/",
   },
   {
-    title: "Mathtrade",
+    title: "MathTrade – Stock Trading Simulator",
     description:
       "A responsive web application built as a practice project that simulates a stock/crypto trading platform. Users can view market data, buy/sell stocks, track portfolio performance, and practice trading in a risk-free environment.",
     imageSrc: "/mathtrade-screenshot.png",

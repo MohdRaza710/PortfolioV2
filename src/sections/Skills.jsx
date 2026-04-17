@@ -16,12 +16,12 @@ function SkillCard({ group, items, index }) {
     <Reveal delay={Math.min(index * 0.06, 0.2)}>
       <div className="glass h-full rounded-2xl p-6">
         <div className="flex items-center gap-3">
-          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-500/15 text-blue-200 ring-1 ring-blue-500/30">
+          <span className="grid h-10 w-10 place-items-center rounded-2xl bg-blue-500/15 text-blue-600 dark:text-blue-300 ring-1 ring-blue-500/30 transition-colors">
             <Icon className="h-5 w-5" />
           </span>
           <div>
-            <p className="text-sm font-semibold text-zinc-100">{group}</p>
-            <p className="text-xs text-zinc-400">Tooling & patterns</p>
+            <p className="text-sm font-semibold text-zinc-900 dark:text-zinc-100 transition-colors">{group}</p>
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 transition-colors">Tooling & patterns</p>
           </div>
         </div>
 
@@ -29,7 +29,7 @@ function SkillCard({ group, items, index }) {
           {items.map((s) => (
             <span
               key={s}
-              className="rounded-xl border border-white/10 bg-zinc-950/40 px-3 py-2 text-xs font-semibold text-zinc-200"
+              className="rounded-xl border border-black/5 bg-black/5 px-3 py-2 text-xs font-semibold text-zinc-700 dark:border-white/10 dark:bg-zinc-900 dark:text-zinc-200 transition-colors"
             >
               {s}
             </span>
@@ -57,4 +57,3 @@ export function Skills() {
     </section>
   );
 }
-

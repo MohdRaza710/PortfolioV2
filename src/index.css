@@ -1,93 +1,102 @@
 @import "tailwindcss";
 
-/* Global defaults */
+/* Enable dark mode properly for Tailwind v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Global Settings */
 html {
   scroll-behavior: smooth;
 }
 
 ::selection {
-  background: rgba(59, 130, 246, 0.35);
+  background: rgba(59, 130, 246, 0.25);
 }
 
+.dark ::selection {
+  background: rgba(59, 130, 246, 0.4);
+}
+
+/* Base Styles */
 @layer base {
   :root {
-    color-scheme: dark;
+    color-scheme: light dark;
   }
 
   body {
-    @apply bg-zinc-950 text-zinc-100 antialiased;
+    @apply bg-zinc-50 text-zinc-950 antialiased transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-zinc-950 text-zinc-100;
   }
 }
 
+/* Components */
 @layer components {
   .container-max {
     @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
   }
 
   .glass {
-    @apply border border-white/10 bg-white/5 backdrop-blur-xl;
+    @apply border border-zinc-200 bg-white/90 backdrop-blur-2xl shadow-sm transition-all duration-300;
+    @apply dark:border-white/10 dark:bg-zinc-900/90;
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-500 active:scale-[0.97] transition-all;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-3 text-sm font-semibold text-zinc-100 transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white px-5 py-3 text-sm font-semibold text-zinc-800 hover:bg-zinc-100 active:scale-[0.97] transition-all dark:border-white/10 dark:bg-white/5 dark:text-zinc-100 dark:hover:bg-white/10;
   }
 
   .btn-shimmer {
-    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/60 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950;
-  }
-
-  .btn-shimmer::after {
-    content: "";
-    position: absolute;
-    inset: -4px;
-    transform: translateX(-120%) rotate(12deg);
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(255, 255, 255, 0.18) 35%,
-      rgba(255, 255, 255, 0.35) 50%,
-      rgba(255, 255, 255, 0.18) 65%,
-      transparent 100%
-    );
-    transition: transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
-    pointer-events: none;
-  }
-
-  .btn-shimmer:hover::after {
-    transform: translateX(120%) rotate(12deg);
+    @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-500 active:scale-[0.97] transition-all;
   }
 }
 
+/* Utilities */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
-  }
-
-  .mask-fade-y {
-    -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
-  }
-
-  @keyframes caret-blink {
-    0%,
-    45% {
-      opacity: 1;
-    }
-    55%,
-    100% {
-      opacity: 0;
-    }
   }
 
   .caret {
     display: inline-block;
     width: 0.6ch;
     margin-left: 2px;
-    border-right: 2px solid rgba(244, 244, 245, 0.7);
+    border-right: 2px solid rgb(39 39 42);
     animation: caret-blink 1s step-end infinite;
   }
+
+  .dark .caret {
+    border-right: 2px solid rgb(244 244 245);
+  }
+
+  @keyframes caret-blink {
+
+    0%,
+    45% {
+      opacity: 1;
+    }
+
+    55%,
+    100% {
+      opacity: 0;
+    }
+  }
+}
+
+/* ==================== CUSTOM CURSOR ==================== */
+html, body {
+  cursor: url('/arrow.cur') 8 8, auto !important;
+}
+
+a, 
+button, 
+[role="button"],
+label,
+input[type="submit"],
+.cursor-pointer {
+  cursor: url('/link.cur') 8 8, pointer !important;
 }

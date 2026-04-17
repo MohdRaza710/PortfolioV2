@@ -54,10 +54,6 @@ export function MobileMenu({ open, onClose, links }) {
                 </a>
               ))}
             </nav>
-
-            <div className="mt-auto px-5 pb-6 pt-4 text-xs text-zinc-400">
-              Tip: set your real links in <code className="text-zinc-300">src/data/portfolio.js</code>
-            </div>
           </MotionAside>
         </>
       ) : null}

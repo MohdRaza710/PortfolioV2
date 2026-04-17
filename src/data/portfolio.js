@@ -38,9 +38,9 @@ export const SKILLS = [
 
 export const PROJECTS = [
   {
-    title: "AAMEquimpment",
+    title: "AAMEquipments – Industrial Components Website",
     description:
-      "A high-performance, commercial digital catalog developed for a specialized heavy machinery and truck parts supplier. The platform is designed to streamline the way B2B clients browse and source essential industrial components.",
+      "A clean and responsive business website developed for AAMEquipments (AAMMG), a company specializing in top-tier industrial components, equipment, and innovative technology services in Madagascar. The site showcases their range of industrial products (including trailer axles and heavy-duty equipment) and technology solutions, with clear service presentation and professional design aimed at business and industrial clients.",
     imageSrc: "/aammg.com-screenshot.png",
     tech: ["React", "Node.js", "Express", "Socket.io", "MongoDB"],
     icon: MessagesSquare,
@@ -49,16 +49,16 @@ export const PROJECTS = [
   {
     title: "Salary Management System",
     description:
-      "A comprehensive, full-stack human resources and payroll platform designed to automate administrative workflows. The application focuses on digitizing employee records, tracking attendance, and streamlining the complex process of monthly payroll generation.",
+      "A modern HR management dashboard built as a practice project. It allows managing employees, tracking attendance, handling leave requests, and viewing team information in an organized interface. The dashboard features a clean design with intuitive navigation, making it easy for HR professionals to oversee employee data and streamline administrative tasks.",
     imageSrc: "/hr-mng-screenshot.png",
     tech: ["React", "Node.js", "Express", "MongoDB"],
     icon: ShieldCheck,
     liveUrl: "https://hr-mng-thdz.vercel.app/",
   },
   {
-    title: "AAMTechsolution",
+    title: "AAMTechSolution – Renewable Energy & Construction Website",
     description:
-      "A professional service platform showcasing end-to-end technical solutions, ranging from custom software development to advanced networking infrastructure. This site serves as a digital hub for professional IT services and client management.",
+      "A clean, responsive business website developed for AAMTechSolution, a company specializing in solar energy and modern construction services in Madagascar and the Indian Ocean region. The website showcases AAM Energy (solar panels, complete solar solutions, and installations) and AAM Construction (prefab buildings and modular structures). It features a modern design, clear service presentation, project highlights, and strong calls-to-action to attract residential and commercial clients.",
     imageSrc: "/aamtechsolution.com-screenshot.png",
     tech: ["React", "Tailwind", "API", "Express", "MongoDB", "Socket.io"],
     icon: ShoppingCart,
@@ -67,7 +67,7 @@ export const PROJECTS = [
   {
     title: "Personal Finance & Expense Tracker",
     description:
-      "A user-friendly application for managing personal finances and tracking expenses. The platform provides insights into spending patterns and helps users make informed financial decisions.",
+      "A clean and functional expense tracking web app developed to help users manage personal finances. Features include adding income & expenses, categorizing transactions, viewing summaries, and visual reports (charts).",
     imageSrc: "/finance-tracker-screenshot.png",
     tech: ["Next.JS", "Postgres SQL", "Supabase"],
     icon: Wallet,
@@ -76,7 +76,7 @@ export const PROJECTS = [
   {
     title: "Mathtrade",
     description:
-      "A specialized trading platform designed to facilitate Math Trades a unique swap system where participants use an algorithm to maximize the number of successful exchanges. Unlike a direct 1-to-1 trade, this platform enables multi-user trade loops, allowing User A to give to User B, while receiving from User C.",
+      "A responsive web application built as a practice project that simulates a stock/crypto trading platform. Users can view market data, buy/sell stocks, track portfolio performance, and practice trading in a risk-free environment.",
     imageSrc: "/mathtrade-screenshot.png",
     tech: ["React", "Tailwind CSS", "API", "Chart.js"],
     icon: ChartNoAxesCombined,
